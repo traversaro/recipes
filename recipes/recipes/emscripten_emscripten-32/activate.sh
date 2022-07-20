@@ -12,7 +12,7 @@ if [ -z ${CONDA_FORGE_EMSCRIPTEN_ACTIVATED+x} ]; then
 
     export PATH="$CONDA_EMSDK_DIR/upstream/emscripten/":$PATH
 
-    export CMAKE_ARGS="$CMAKE_ARGS -DCMAKE_FIND_ROOT_PATH_MODE_PACKAGE=ON -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true"
+    export CMAKE_ARGS="$CMAKE_ARGS -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true"
 
     cmake () {
         emcmake cmake "$@"
